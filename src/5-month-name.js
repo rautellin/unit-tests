@@ -4,5 +4,10 @@ const months = [
 ]
 
 export const monthName = (monthNumber) => {
-  return months[monthNumber]
+  if (monthNumber > 12) {
+    return null
+  } else if (monthNumber < 1) {
+    return null
+  }
+  return months[monthNumber - 1]
 }
